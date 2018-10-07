@@ -23,9 +23,9 @@ title_description = title.find('h2')
 li_description = title.find('ul')
 
 #Replaces meta tags and description
-meta_title.replace_with(r'&lt;meta name="title" content={0}&gt;')
-meta_description.replace_with(r'&lt;meta name="description" content={1}&gt;')
-title_description.replace_with(r'&lt;h2&gt;{2}&lt;/h2&gt;')
+meta_title.replace_with(r'<meta name="title" content={0}>')
+meta_description.replace_with(r'<meta name="description" content={1}>')
+title_description.replace_with(r'<h2>{2}</h2>')
 
 #Replaces li descriptions
 #li_description.replace_with(r'')
@@ -33,17 +33,10 @@ title_description.replace_with(r'&lt;h2&gt;{2}&lt;/h2&gt;')
 
 finished_html = str(page_soup)
 
-finished_html.replace("&lt;", "<")
-finished_html.replace("&gt;", ">")
+finished_html = finished_html.replace(r"&lt;", r"<")
+finished_html = finished_html.replace(r"&gt;", r">")
 
 #Create a file and open it up for writing
 with open('RevisedHtml.html', 'w') as html_file:
     #Write html to file
     html_file.write(finished_html)
-
-
-
-#------------------------------------------------
-#Make sure to do a replace for &lt; and &gt;
-#i.e.   s = s.replace("&lt;", "<")
-#------------------------------------------------
