@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 
 #Gets html from url and makes BS4 object
-url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292731602969&t=0&tid=10&category=117014&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
+url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292762557824&t=1539612313000&tid=10&category=170098&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
 uClient   = urlopen(url)
 page_html = uClient.read()
 uClient.close()
