@@ -1,11 +1,10 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 
-def Parser():
+def Parser(url):
     """
     Parses HTML and creates BeautifulSoup object
     """
-    url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292731602969&t=0&tid=10&category=117014&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
     uClient   = urlopen(url)
     page_html = uClient.read()
     uClient.close()
@@ -44,7 +43,8 @@ def GrabAndReplace(page_soup):
     return finished_html
 
 if __name__ == "__main__":
-    page_soup = Parser()
+    url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292731602969&t=0&tid=10&category=117014&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
+    page_soup = Parser(url)
     finished_html = GrabAndReplace(page_soup)
 
     #Create a file and open it up for writing
