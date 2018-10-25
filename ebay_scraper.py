@@ -43,7 +43,7 @@ def GrabAndReplace(page_soup):
     return finished_html
 
 if __name__ == "__main__":
-    url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292731602969&t=0&tid=10&category=117014&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
+    url       = 'https://vi.vipr.ebaydesc.com/ws/eBayISAPI.dll?ViewItemDescV4&item=292762616130&t=0&tid=10&category=170103&seller=canopystreet&excSoj=1&excTrk=1&lsite=0&ittenable=false&domain=ebay.com&descgauge=1&cspheader=1&oneClk=1&secureDesc=1'
     page_soup = Parser(url)
     finished_html = GrabAndReplace(page_soup)
 
